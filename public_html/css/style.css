@@ -18,8 +18,13 @@
 }
 
 
-#primeira-seção{
+#primeira-seção-index{
     width: 500px;
     height: 500px;
+    margin: 0 auto;
+}
+
+#primeira-seção-cadastro{
+    width: 600px;
     margin: 0 auto;
 }
