@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Pagina Inicial</title>
+    <script src="http://code.angularjs.org/1.0.1/angular-1.0.1.min.js"></script>
+
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+  </head>
+  <body >
+      <header>
+          <nav class="navbar" id="cor-primaria">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#" id="cor-texto-secundario">
+                        Inicio
+                    </a>
+                </div>
+            </div>
+        </nav>
+      </header>
+      
+      <section id="primeira-seção">
+          <div class="well">
+              <div class="row">
+                  <div class="col-md-12">       
+                    <label>Login: </label>
+                    <input type="text" class="form-control" ng-model="login">
+                    <br>
+                  <!--  <label>Senha: </label>
+                    <input type="password" class="form-control" ng-model="senha">-->
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!--<button type="button" class="btn btn-large btn-block "  id="cor-secundaria" style="color: #E0F2F1;" ng-click="cadastrar(login,senha)">Cadastre-se</button>-->
+                        </div>
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-large btn-block " id="cor-secundaria" style="color: #E0F2F1;" ng-click="adicionarPessoa()">Adicionar</button>
+                        </div>
+                    </div>
+                    <p>o login é: {{ login }}</p> 
+                    <br>
+                    <div ng-controller="ListaLoginController">
+                         <ul class="list-group">
+                            <li class="list-group-item" ng-repeat="item in pessoas">{{item}}</li>
+                            <li class="list-group-item" ng-show="pessoas.length == 0">Não tem ninguem</li>
+                        </ul>   
+                    </div>
+                    
+                  </div>    
+              </div>
+          </div>
+      </section>
+
+    <!-- JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://code.angularjs.org/1.0.1/angular-1.0.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js">
+    
+  </body>
+</html>
